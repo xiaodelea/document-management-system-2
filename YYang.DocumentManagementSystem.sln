@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YYang.DocumentManagementSystem.Core", "YYang.DocumentManagementSystem.Core\YYang.DocumentManagementSystem.Core.csproj", "{E29A97B5-43E2-426F-83D6-2FBEE0DF037E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YYang.DocumentManagementSystem.Core.UnitTest", "YYang.DocumentManagementSystem.Core.UnitTest\YYang.DocumentManagementSystem.Core.UnitTest.csproj", "{CF2468DB-A2B3-47C0-8299-25F8A7E75ADC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E29A97B5-43E2-426F-83D6-2FBEE0DF037E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E29A97B5-43E2-426F-83D6-2FBEE0DF037E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E29A97B5-43E2-426F-83D6-2FBEE0DF037E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF2468DB-A2B3-47C0-8299-25F8A7E75ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF2468DB-A2B3-47C0-8299-25F8A7E75ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF2468DB-A2B3-47C0-8299-25F8A7E75ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF2468DB-A2B3-47C0-8299-25F8A7E75ADC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
