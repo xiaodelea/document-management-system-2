@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
+using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using YYang.DocumentManagementSystem.Core;
 
@@ -12,6 +14,20 @@ namespace YYang.DocumentManagementSystem.Core.UnitTest
         public void Initialize()
         {
             Watcher.FileSystemWatchers.Clear();
+
+            string[] filePaths = Directory.GetFiles(Constants.RootPath);
+            foreach (string filePath in filePaths)
+            {
+                try
+                {
+                    File.Delete(filePath);
+                }
+                catch (Exception)
+                {
+                    // empty
+                }
+            }
+                
         }
 
         [TestMethod]
@@ -35,10 +51,34 @@ namespace YYang.DocumentManagementSystem.Core.UnitTest
             Assert.AreNotSame(Watcher.FileSystemWatchers[1], Watcher.FileSystemWatchers[2]);
         }
 
+        [TestMethod]
+        public void RecognizesFile()
+        {
+            string[] validFileExtensions = {"jpeg", "jpg", "pdf", "png"};
+
+            var watcher = new Watcher(Constants.RootPath);
+
+            foreach (var fileExtension in validFileExtensions)
+            {
+                using (var writer = new StreamWriter(string.Format(@"{0}\{1}{2}", Constants.RootPath, fileExtension, "." + fileExtension)))
+                {
+                    Console.WriteLine("Write " + fileExtension);
+                    writer.WriteLine(fileExtension.ToUpper());
+                }
+
+                Thread.Sleep(20); // give the file system time to create the file
+
+                var lastLine = File.ReadLines(Constants.RootPath + @"\log.txt").Last();
+
+                Console.WriteLine("Assert");
+                Assert.AreEqual(fileExtension + "." + fileExtension, lastLine);
+            }
+        }
+
         [TestCleanup]
         public void Cleanup()
         {
-            Watcher.FileSystemWatchers.Clear();
+            Initialize();
         }
     }
 }

@@ -14,18 +14,18 @@ namespace YYang.DocumentManagementSystem.Core
             var watcher = new FileSystemWatcher(rootPath);
             watcher.Filter = "*.*";
             watcher.EnableRaisingEvents = true;
-            watcher.Created += OnChanged;
+            watcher.Created += OnCreated;
 
             FileSystemWatchers.Add(watcher);
         }
 
-        private void OnChanged(object sender, FileSystemEventArgs eventArgs)
+        private void OnCreated(object sender, FileSystemEventArgs eventArgs)
         {
             var ext = (Path.GetExtension(eventArgs.FullPath) ?? string.Empty).ToLower();
 
             if (_extensions.Any(ext.Equals))
             {
-                // TODO: found valid file. Do something with it.
+                FileProcessor.Process(new FileInfo(eventArgs.FullPath));
             }
         }
     }
