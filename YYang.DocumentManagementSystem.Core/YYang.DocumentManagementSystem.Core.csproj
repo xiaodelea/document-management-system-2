@@ -69,7 +69,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DocumentStage.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Document.cs" />
+    <Compile Include="DocumentStatus.cs" />
     <Compile Include="FileProcessor.cs" />
     <Compile Include="Watcher.cs" />
     <Page Include="MainWindow.xaml">

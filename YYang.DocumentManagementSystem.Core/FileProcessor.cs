@@ -15,6 +15,7 @@ namespace YYang.DocumentManagementSystem.Core
             using (var writer = new StreamWriter(string.Format(@"{0}\log.txt", Constants.RootPath)))
             {
                 writer.WriteLine(file.Name);
+                
             }
         }
     }
