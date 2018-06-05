@@ -17,7 +17,7 @@ namespace YYang.DocumentManagementSystem.Core
 
         public Document(FileInfo file)
         {
-            Guid = System.Guid.NewGuid();
+            Guid = Guid.NewGuid();
             FileInfo = file;
             DocumentStage = DocumentStage.Initial;
             DocumentStatus = DocumentStatus.Open;
