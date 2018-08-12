@@ -11,9 +11,11 @@ namespace YYang.DocumentManagementSystem.Core
 
         public Watcher(string rootPath)
         {
-            var watcher = new FileSystemWatcher(rootPath);
-            watcher.Filter = "*.*";
-            watcher.EnableRaisingEvents = true;
+            var watcher = new FileSystemWatcher(rootPath)
+            {
+                Filter = "*.*",
+                EnableRaisingEvents = true
+            };
             watcher.Created += OnCreated;
 
             FileSystemWatchers.Add(watcher);

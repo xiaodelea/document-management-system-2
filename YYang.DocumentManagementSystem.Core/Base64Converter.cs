@@ -8,39 +8,39 @@ namespace YYang.DocumentManagementSystem.Core
 {
     public class Base64Converter : IConverter
     {
-        public Byte[] bytes { get; private set; }
-        public String base64String { get; private set; }
+        public Byte[] Bytes { get; private set; }
+        public String Base64String { get; private set; }
 
         
 
         public Base64Converter(Byte[] bytes)
         {
-            this.bytes = bytes;
+            this.Bytes = bytes;
         }
 
         public Base64Converter(string base64String)
         {
-            this.base64String = base64String;
+            this.Base64String = base64String;
         }
 
         public void Encode()
         {
-            if (bytes == null)
+            if (Bytes == null)
             {
                 throw new InputException();
             }
 
-            base64String = Convert.ToBase64String(bytes);
+            Base64String = Convert.ToBase64String(Bytes);
         }
 
         public void Decode()
         {
-            if (string.IsNullOrEmpty(base64String))
+            if (string.IsNullOrEmpty(Base64String))
             {
                 throw new InputException();
             }
 
-            bytes = Convert.FromBase64String(base64String);
+            Bytes = Convert.FromBase64String(Base64String);
         }
     }
 }

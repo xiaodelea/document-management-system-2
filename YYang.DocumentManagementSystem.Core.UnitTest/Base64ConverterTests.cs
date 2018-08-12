@@ -21,7 +21,7 @@ namespace YYang.DocumentManagementSystem.Core.UnitTest
             IConverter converter = new Base64Converter(bytes);
             converter.Encode();
             
-            Assert.IsTrue(Regex.IsMatch(((Base64Converter)converter).base64String, @"^[a-zA-Z0-9\+/]*={0,2}$"));
+            Assert.IsTrue(Regex.IsMatch(((Base64Converter)converter).Base64String, @"^[a-zA-Z0-9\+/]*={0,2}$"));
         }
 
         [Test]
@@ -59,7 +59,7 @@ namespace YYang.DocumentManagementSystem.Core.UnitTest
             IConverter converter = new Base64Converter(base64String);
             converter.Decode();
 
-            Assert.AreEqual(bytes, ((Base64Converter)converter).bytes);
+            Assert.AreEqual(bytes, ((Base64Converter)converter).Bytes);
         }
     }
 }
