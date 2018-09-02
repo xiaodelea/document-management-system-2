@@ -5,7 +5,11 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YYang.DocumentManagementSystem.Core", "YYang.DocumentManagementSystem.Core\YYang.DocumentManagementSystem.Core.csproj", "{E29A97B5-43E2-426F-83D6-2FBEE0DF037E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YYang.DocumentManagementSystem.Core.UnitTest", "YYang.DocumentManagementSystem.Core.UnitTest\YYang.DocumentManagementSystem.Core.UnitTest.csproj", "{CF2468DB-A2B3-47C0-8299-25F8A7E75ADC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YYang.DocumentManagementSystem.Core.UnitTests", "YYang.DocumentManagementSystem.Core.UnitTest\YYang.DocumentManagementSystem.Core.UnitTests.csproj", "{CF2468DB-A2B3-47C0-8299-25F8A7E75ADC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YYang.DocumentManagementSystem.NAPS2Wrapper", "YYang.DocumentManagementSystem.NAPS2Wrapper\YYang.DocumentManagementSystem.NAPS2Wrapper.csproj", "{0C06FA5C-4B1B-4CAE-AA85-7B1820AFDF09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YYang.DocumentManagementSystem.NAPS2Wrapper.UnitTests", "YYang.DocumentManagementSystem.NAPS2Wrapper.UnitTests\YYang.DocumentManagementSystem.NAPS2Wrapper.UnitTests.csproj", "{DADF4FC4-787F-48F2-97DB-8B8F28E0D294}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{CF2468DB-A2B3-47C0-8299-25F8A7E75ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF2468DB-A2B3-47C0-8299-25F8A7E75ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF2468DB-A2B3-47C0-8299-25F8A7E75ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C06FA5C-4B1B-4CAE-AA85-7B1820AFDF09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C06FA5C-4B1B-4CAE-AA85-7B1820AFDF09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C06FA5C-4B1B-4CAE-AA85-7B1820AFDF09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C06FA5C-4B1B-4CAE-AA85-7B1820AFDF09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DADF4FC4-787F-48F2-97DB-8B8F28E0D294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DADF4FC4-787F-48F2-97DB-8B8F28E0D294}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DADF4FC4-787F-48F2-97DB-8B8F28E0D294}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DADF4FC4-787F-48F2-97DB-8B8F28E0D294}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
